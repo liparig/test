@@ -2,8 +2,11 @@ package org.gephi.toolkit.demos;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import org.gephi.graph.api.*;
@@ -74,19 +77,29 @@ public class Visualizza {
         
         //Refresh the preview and reset the zoom
         previewController.render(target);
-        target.refresh();
+        
         target.resetZoom();
 
         //Add the applet to a JFrame and display
         JFrame frame = new JFrame("Test Preview");
+        JButton zoom=new JButton();
+        JButton unzoom=new JButton();
+        zoom.addActionListener(new ActionListener(){
+        	public void actionPerformed(ActionEvent arg0) {
+        		PreviewController previewController = Lookup.getDefault().lookup(PreviewController.class);
+                ProcessingTarget target = (ProcessingTarget) previewController.getRenderTarget(RenderTarget.PROCESSING_TARGET);
+                target.zoomPlus();
+			}
+        }); 
+
         frame.setLayout(new BorderLayout());
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(applet, BorderLayout.CENTER);
-        
+        frame.add(zoom,BorderLayout.EAST);
         frame.pack();
         frame.setVisible(true);
-		
+        target.refresh();
 	}
 
 	/**

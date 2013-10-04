@@ -23,10 +23,10 @@ package org.gephi.toolkit.demos;
 public class Main {
 
     public static void main(String[] args) {
-    	
-        HeadlessSimple headlessSimple = new HeadlessSimple();
-        headlessSimple.script();
 
+        ImportExport importExport = new ImportExport();
+        importExport.script();
+      
        /**
         HeadlessSimple headlessSimple = new HeadlessSimple();
         headlessSimple.script();
