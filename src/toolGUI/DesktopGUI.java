@@ -14,6 +14,8 @@ import java.util.Observer;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.ContainerAdapter;
+import java.awt.event.ContainerEvent;
 
 public class DesktopGUI extends JFrame implements Observer {
 
@@ -21,21 +23,6 @@ public class DesktopGUI extends JFrame implements Observer {
 	private MenuBarGUI menuBarGUI;
 	private OverviewGUI overviewGUI=null;
 	private PApplet applet=null;
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					DesktopGUI frame = new DesktopGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
@@ -45,8 +32,13 @@ public class DesktopGUI extends JFrame implements Observer {
 		setTitle("ToolGUI");
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 359, 389);
 		contentPane = new JPanel();
+		contentPane.addContainerListener(new ContainerAdapter() {
+			@Override
+			public void componentAdded(ContainerEvent arg0) {
+				pack();
+			}
+		});
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[]{407, 190, 0};
@@ -71,16 +63,16 @@ public class DesktopGUI extends JFrame implements Observer {
 		gbc_eastMenuGUI.gridx = 1;
 		gbc_eastMenuGUI.gridy = 1;
 		contentPane.add(eastMenuGUI, gbc_eastMenuGUI);
-		this.pack();
 
 		menuBarGUI.getCaricaEvent().addObserver(eastMenuGUI.getInfoGUI());
 		menuBarGUI.getCaricaEvent().addObserver(this);
+		eastMenuGUI.getFiltriPanel().getApplyEvent().addObserver(this);
+		this.pack();
 		
 	}
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		if(overviewGUI==null){
-		
 		overviewGUI=new OverviewGUI();
 		applet=overviewGUI.getPApplet();
 		GridBagConstraints gbc_applet = new GridBagConstraints();
@@ -90,7 +82,10 @@ public class DesktopGUI extends JFrame implements Observer {
 		gbc_applet.gridy = 1;
 		contentPane.add(applet,gbc_applet);
 		menuBarGUI.getCaricaEvent().addObserver(overviewGUI);
+		eastMenuGUI.getFiltriPanel().getApplyEvent().addObserver(overviewGUI);
 		}
+		applet.mousePressed();
+
 		this.pack();
 	}
 }

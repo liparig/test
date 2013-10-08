@@ -8,6 +8,7 @@ import java.util.Observable;
 
 
 
+
 import org.gephi.graph.api.DirectedGraph;
 import org.gephi.graph.api.Graph;
 import org.gephi.graph.api.GraphModel;
@@ -32,16 +33,16 @@ import processing.core.PApplet;
 public class CaricaEvent extends Observable implements ActionListener {
 
 	public void actionPerformed(ActionEvent arg0) {
+		String path;
 		ProjectController pc = Lookup.getDefault().lookup(ProjectController.class);
 		pc.closeCurrentProject();
 		pc.newProject();
 		Workspace workspace=pc.getCurrentWorkspace();
         ImportController importController = Lookup.getDefault().lookup(ImportController.class);
         Container container;
-		PreviewController previewController = Lookup.getDefault().lookup(PreviewController.class);
-
         try {
             File file = new File(getClass().getResource("/org/gephi/toolkit/demos/resources/gediminas_graph.gv").toURI());
+            path=file.getName();
             container = importController.importFile(file);
             container.getLoader().setEdgeDefault(EdgeDefault.DIRECTED);   //Force DIRECTED
             container.setAllowAutoNode(false);  //Don't create missing nodes
@@ -49,37 +50,20 @@ public class CaricaEvent extends Observable implements ActionListener {
             ex.printStackTrace();
             return;
         }
-      //Append imported data to GraphAPI
-        importController.process(container, new DefaultProcessor(), workspace);
-        
-        this.setChanged();
-        this.notifyObservers();
-        
+    	PreviewController previewController=Lookup.getDefault().lookup(PreviewController.class);
+
         PreviewModel previewModel=previewController.getModel();
         previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS, Boolean.TRUE);
         previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.WHITE));
         previewModel.getProperties().putValue(PreviewProperty.EDGE_CURVED, Boolean.FALSE);
         previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);
         previewModel.getProperties().putValue(PreviewProperty.EDGE_RADIUS, 10f);
-        previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.BLUE);
+        previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.BLACK);
         previewController.refreshPreview();
-        
-        //New Processing target, get the PApplet
-        ProcessingTarget target = (ProcessingTarget) previewController.getRenderTarget(RenderTarget.PROCESSING_TARGET);
-        PApplet applet = target.getApplet();
-        applet.init();
-        applet.mousePressed();
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException ex) {
-            Exceptions.printStackTrace(ex);
-        }
-        
-        //Refresh the preview and reset the zoom
-        previewController.render(target);
-        target.refresh();
-        target.resetZoom();
-        
+      //Append imported data to GraphAPI
+        importController.process(container, new DefaultProcessor(), workspace);
+        this.setChanged();
+        this.notifyObservers(path);
 	}
 
 }
