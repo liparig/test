@@ -1,10 +1,7 @@
 package toolGUI;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 
 import processing.core.PApplet;
 
@@ -14,8 +11,8 @@ import java.util.Observer;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-import java.awt.event.ContainerAdapter;
-import java.awt.event.ContainerEvent;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 public class DesktopGUI extends JFrame implements Observer {
 
@@ -31,18 +28,23 @@ public class DesktopGUI extends JFrame implements Observer {
 	public DesktopGUI() {
 		setTitle("ToolGUI");
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		contentPane = new JPanel();
-		contentPane.addContainerListener(new ContainerAdapter() {
+		addComponentListener(new ComponentAdapter() {
 			@Override
-			public void componentAdded(ContainerEvent arg0) {
-				pack();
+			public void componentResized(ComponentEvent arg0) {
+				if(applet!=null){
+					applet.mousePressed();
+				}
 			}
 		});
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		contentPane = new JPanel();
+
+
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.columnWidths = new int[]{407, 190, 0};
-		gbl_contentPane.rowHeights = new int[]{30, 500, 0};
+		gbl_contentPane.columnWidths = new int[]{800, 190, 0};
+		gbl_contentPane.rowHeights = new int[]{30, 600, 0};
 		gbl_contentPane.columnWeights = new double[]{1.0, 0.0, Double.MIN_VALUE};
 		gbl_contentPane.rowWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
@@ -51,7 +53,7 @@ public class DesktopGUI extends JFrame implements Observer {
 		GridBagConstraints gbc_menuBarGUI = new GridBagConstraints();
 		gbc_menuBarGUI.insets = new Insets(0, 0, 5, 0);
 		gbc_menuBarGUI.gridwidth = 2;
-		gbc_menuBarGUI.anchor = GridBagConstraints.NORTHWEST;
+		gbc_menuBarGUI.anchor = GridBagConstraints.NORTH;
 		gbc_menuBarGUI.fill = GridBagConstraints.HORIZONTAL;
 		gbc_menuBarGUI.gridx = 0;
 		gbc_menuBarGUI.gridy = 0;
@@ -65,6 +67,8 @@ public class DesktopGUI extends JFrame implements Observer {
 		contentPane.add(eastMenuGUI, gbc_eastMenuGUI);
 
 		menuBarGUI.getCaricaEvent().addObserver(eastMenuGUI.getInfoGUI());
+		menuBarGUI.getCaricaEvent().addObserver(eastMenuGUI.getFiltriPanel());
+
 		menuBarGUI.getCaricaEvent().addObserver(this);
 		eastMenuGUI.getFiltriPanel().getApplyEvent().addObserver(this);
 		this.pack();

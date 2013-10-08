@@ -6,13 +6,6 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.Observable;
 
-
-
-
-import org.gephi.graph.api.DirectedGraph;
-import org.gephi.graph.api.Graph;
-import org.gephi.graph.api.GraphModel;
-import org.gephi.graph.api.GraphView;
 import org.gephi.io.importer.api.Container;
 import org.gephi.io.importer.api.EdgeDefault;
 import org.gephi.io.importer.api.ImportController;
@@ -20,15 +13,11 @@ import org.gephi.io.processor.plugin.DefaultProcessor;
 import org.gephi.preview.api.PreviewController;
 import org.gephi.preview.api.PreviewModel;
 import org.gephi.preview.api.PreviewProperty;
-import org.gephi.preview.api.ProcessingTarget;
-import org.gephi.preview.api.RenderTarget;
 import org.gephi.preview.types.DependantOriginalColor;
 import org.gephi.project.api.ProjectController;
 import org.gephi.project.api.Workspace;
-import org.openide.util.Exceptions;
 import org.openide.util.Lookup;
 
-import processing.core.PApplet;
 
 public class CaricaEvent extends Observable implements ActionListener {
 
@@ -50,10 +39,10 @@ public class CaricaEvent extends Observable implements ActionListener {
             ex.printStackTrace();
             return;
         }
-    	PreviewController previewController=Lookup.getDefault().lookup(PreviewController.class);
-
+    	
+        PreviewController previewController=Lookup.getDefault().lookup(PreviewController.class);
         PreviewModel previewModel=previewController.getModel();
-        previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS, Boolean.TRUE);
+        previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS, Boolean.FALSE);
         previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.WHITE));
         previewModel.getProperties().putValue(PreviewProperty.EDGE_CURVED, Boolean.FALSE);
         previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);

@@ -61,7 +61,6 @@ public class FilterRangeSlider extends JPanel {
         gbc_rangeSliderValue2.gridx = 3;
         gbc_rangeSliderValue2.gridy = 0;
         add(rangeSliderValue2, gbc_rangeSliderValue2);
-        rangeSlider.setUpperValue(max);
         rangeSlider.setPreferredSize(new Dimension(145, 35));
         rangeSlider.setPaintTicks(true);
         rangeSlider.setPaintLabels(true);
@@ -90,6 +89,12 @@ public class FilterRangeSlider extends JPanel {
     }
     public RangeSlider getRangeSlider(){
     	return rangeSlider;
+    }
+    public void setUpperValue(int max){
+        rangeSlider.setMaximum(max);
+        rangeSlider.setUpperValue(max);
+    	this.rangeSliderValue1.setText(String.valueOf(rangeSlider.getValue()));
+        this.rangeSliderValue2.setText(String.valueOf(rangeSlider.getUpperValue()));
     }
 
 }
