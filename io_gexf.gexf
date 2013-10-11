@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.2draft" version="1.2" xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
-  <meta lastmodifieddate="2013-10-03">
+  <meta lastmodifieddate="2013-10-10">
     <creator>Gephi 0.8.1</creator>
     <description></description>
   </meta>
@@ -9,463 +9,463 @@
       <node id="0.0" label="Myriel">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-440.26474" y="-242.80684" z="0.0"></viz:position>
+        <viz:position x="-81.099266" y="455.7333" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="1.0" label="Napoleon">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="383.14957" y="-200.65602" z="0.0"></viz:position>
+        <viz:position x="-13.274715" y="-4.983254" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="2.0" label="MlleBaptistine">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="510.30362" y="-67.246414" z="0.0"></viz:position>
+        <viz:position x="430.09134" y="-399.20038" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="3.0" label="MmeMagloire">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="252.43094" y="258.75723" z="0.0"></viz:position>
+        <viz:position x="63.194614" y="-365.30624" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="4.0" label="CountessDeLo">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-113.69604" y="22.872574" z="0.0"></viz:position>
+        <viz:position x="251.94412" y="-132.86305" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="5.0" label="Geborand">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="365.86557" y="127.34233" z="0.0"></viz:position>
+        <viz:position x="-200.41013" y="438.24783" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="6.0" label="Champtercier">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-314.8572" y="27.124588" z="0.0"></viz:position>
+        <viz:position x="-190.35504" y="28.27761" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="7.0" label="Cravatte">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-404.45425" y="284.7172" z="0.0"></viz:position>
+        <viz:position x="-404.67255" y="221.20876" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="8.0" label="Count">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="86.58091" y="339.13174" z="0.0"></viz:position>
+        <viz:position x="292.01523" y="116.477684" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="9.0" label="OldMan">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="42.592323" y="-389.30554" z="0.0"></viz:position>
+        <viz:position x="190.70657" y="-359.2682" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="10.0" label="Labarre">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-151.02368" y="-328.96048" z="0.0"></viz:position>
+        <viz:position x="-369.21844" y="113.843834" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="11.0" label="Valjean">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="202.07687" y="439.67" z="0.0"></viz:position>
+        <viz:position x="-42.84451" y="-360.88864" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="12.0" label="Marguerite">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-306.51547" y="-114.05919" z="0.0"></viz:position>
+        <viz:position x="-98.96899" y="102.80019" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="13.0" label="MmeDeR">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-189.3201" y="507.5095" z="0.0"></viz:position>
+        <viz:position x="328.8323" y="-402.80142" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="14.0" label="Isabeau">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="193.9484" y="490.5983" z="0.0"></viz:position>
+        <viz:position x="-382.38644" y="116.52639" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="15.0" label="Gervais">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="389.44516" y="329.31747" z="0.0"></viz:position>
+        <viz:position x="-342.5289" y="436.89053" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="16.0" label="Tholomyes">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-31.473139" y="264.44797" z="0.0"></viz:position>
+        <viz:position x="305.5745" y="278.63052" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="17.0" label="Listolier">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-24.565088" y="-1.7685708" z="0.0"></viz:position>
+        <viz:position x="-121.19045" y="-411.38593" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="18.0" label="Fameuil">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-96.31466" y="130.74889" z="0.0"></viz:position>
+        <viz:position x="282.26913" y="76.20443" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="19.0" label="Blacheville">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="173.7864" y="-146.60829" z="0.0"></viz:position>
+        <viz:position x="-358.3701" y="-177.26353" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="20.0" label="Favourite">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-268.01175" y="-88.1219" z="0.0"></viz:position>
+        <viz:position x="-195.3675" y="-228.46025" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="21.0" label="Dahlia">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="455.61502" y="329.49625" z="0.0"></viz:position>
+        <viz:position x="-30.610104" y="433.09305" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="22.0" label="Zephine">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-467.7933" y="53.151047" z="0.0"></viz:position>
+        <viz:position x="-392.85202" y="25.168297" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="23.0" label="Fantine">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-422.5947" y="-429.14447" z="0.0"></viz:position>
+        <viz:position x="99.61521" y="156.32845" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="24.0" label="MmeThenardier">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-376.42734" y="-251.81776" z="0.0"></viz:position>
+        <viz:position x="384.37717" y="-223.47911" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="25.0" label="Thenardier">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="103.97532" y="69.6223" z="0.0"></viz:position>
+        <viz:position x="-122.32781" y="-487.4924" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="26.0" label="Cosette">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-114.417076" y="153.68181" z="0.0"></viz:position>
+        <viz:position x="-43.51373" y="308.3834" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="27.0" label="Javert">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="279.79678" y="-329.1221" z="0.0"></viz:position>
+        <viz:position x="-30.768154" y="-39.54084" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="28.0" label="Fauchelevent">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-249.42471" y="-457.28122" z="0.0"></viz:position>
+        <viz:position x="-302.97812" y="207.46016" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="29.0" label="Bamatabois">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-87.60308" y="-223.485" z="0.0"></viz:position>
+        <viz:position x="199.68503" y="375.57248" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="30.0" label="Perpetue">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-11.629357" y="312.86252" z="0.0"></viz:position>
+        <viz:position x="299.2615" y="-374.26102" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="31.0" label="Simplice">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="506.7648" y="475.36374" z="0.0"></viz:position>
+        <viz:position x="528.9607" y="-121.72324" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="32.0" label="Scaufflaire">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-69.4063" y="-260.75253" z="0.0"></viz:position>
+        <viz:position x="110.78336" y="-154.0165" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="33.0" label="Woman1">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-378.87073" y="-371.23245" z="0.0"></viz:position>
+        <viz:position x="526.6462" y="-31.81092" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="34.0" label="Judge">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-33.142693" y="242.4901" z="0.0"></viz:position>
+        <viz:position x="75.469765" y="-340.4371" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="35.0" label="Champmathieu">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="302.1711" y="-351.17938" z="0.0"></viz:position>
+        <viz:position x="-274.99515" y="251.92574" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="36.0" label="Brevet">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-14.186578" y="-272.48233" z="0.0"></viz:position>
+        <viz:position x="-212.01892" y="475.95993" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="37.0" label="Chenildieu">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="501.6779" y="-179.26118" z="0.0"></viz:position>
+        <viz:position x="-103.571556" y="-208.17125" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="38.0" label="Cochepaille">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-68.85406" y="241.7531" z="0.0"></viz:position>
+        <viz:position x="287.8046" y="400.68375" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="39.0" label="Pontmercy">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-423.15555" y="-458.65726" z="0.0"></viz:position>
+        <viz:position x="127.05973" y="248.36812" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="40.0" label="Boulatruelle">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-204.10013" y="-200.26768" z="0.0"></viz:position>
+        <viz:position x="-1.695217" y="-258.057" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="41.0" label="Eponine">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="332.8679" y="-227.61105" z="0.0"></viz:position>
+        <viz:position x="-460.23422" y="-459.26303" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="42.0" label="Anzelma">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="188.11172" y="-273.88675" z="0.0"></viz:position>
+        <viz:position x="-349.2286" y="-463.67804" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="43.0" label="Woman2">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-420.81863" y="340.4943" z="0.0"></viz:position>
+        <viz:position x="-342.66367" y="-291.83408" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="44.0" label="MotherInnocent">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="66.52726" y="280.1683" z="0.0"></viz:position>
+        <viz:position x="124.28196" y="-280.16873" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="45.0" label="Gribier">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-160.38477" y="454.6553" z="0.0"></viz:position>
+        <viz:position x="-309.27185" y="18.739586" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="46.0" label="Jondrette">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="367.26114" y="-357.76462" z="0.0"></viz:position>
+        <viz:position x="-120.734215" y="-486.9098" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="47.0" label="MmeBurgon">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-318.02917" y="-42.127304" z="0.0"></viz:position>
+        <viz:position x="487.3713" y="143.00655" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="48.0" label="Gavroche">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="20.575811" y="-433.7648" z="0.0"></viz:position>
+        <viz:position x="65.976234" y="438.02945" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="49.0" label="Gillenormand">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="113.936806" y="381.14865" z="0.0"></viz:position>
+        <viz:position x="480.99832" y="386.43234" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="50.0" label="Magnon">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="291.52512" y="132.2451" z="0.0"></viz:position>
+        <viz:position x="448.64957" y="138.38533" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="51.0" label="MlleGillenormand">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-370.02744" y="-173.8669" z="0.0"></viz:position>
+        <viz:position x="-252.8469" y="-442.2484" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="52.0" label="MmePontmercy">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="469.0292" y="69.252914" z="0.0"></viz:position>
+        <viz:position x="1.9478494" y="-162.60881" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="53.0" label="MlleVaubois">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-212.26956" y="66.95152" z="0.0"></viz:position>
+        <viz:position x="187.48093" y="39.534813" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="54.0" label="LtGillenormand">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-324.98178" y="60.596725" z="0.0"></viz:position>
+        <viz:position x="408.35397" y="-166.54765" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="55.0" label="Marius">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-357.21857" y="32.25624" z="0.0"></viz:position>
+        <viz:position x="-58.903133" y="22.791466" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="56.0" label="BaronessT">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-31.397821" y="293.22995" z="0.0"></viz:position>
+        <viz:position x="-286.4921" y="-91.775" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="57.0" label="Mabeuf">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-23.143671" y="5.300063" z="0.0"></viz:position>
+        <viz:position x="352.77542" y="-330.80948" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="58.0" label="Enjolras">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-20.206568" y="266.83243" z="0.0"></viz:position>
+        <viz:position x="81.04221" y="-98.59751" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="59.0" label="Combeferre">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="17.50855" y="462.83926" z="0.0"></viz:position>
+        <viz:position x="215.39822" y="172.48598" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="60.0" label="Prouvaire">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="23.131262" y="-460.0765" z="0.0"></viz:position>
+        <viz:position x="-70.70309" y="-7.355904" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="61.0" label="Feuilly">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="266.0505" y="462.9302" z="0.0"></viz:position>
+        <viz:position x="-451.95602" y="304.99368" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="62.0" label="Courfeyrac">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="13.625434" y="-342.48676" z="0.0"></viz:position>
+        <viz:position x="-270.63785" y="423.46555" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="63.0" label="Bahorel">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="125.810585" y="-112.80736" z="0.0"></viz:position>
+        <viz:position x="-128.70197" y="55.472923" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="64.0" label="Bossuet">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-464.24182" y="-21.537582" z="0.0"></viz:position>
+        <viz:position x="397.2195" y="490.54208" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="65.0" label="Joly">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="254.20297" y="-355.13028" z="0.0"></viz:position>
+        <viz:position x="-202.19421" y="391.52457" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="66.0" label="Grantaire">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="100.85276" y="500.60434" z="0.0"></viz:position>
+        <viz:position x="522.321" y="-353.24118" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="67.0" label="MotherPlutarch">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-50.20144" y="154.02281" z="0.0"></viz:position>
+        <viz:position x="-231.21103" y="12.625145" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="68.0" label="Gueulemer">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-31.061579" y="67.814316" z="0.0"></viz:position>
+        <viz:position x="-359.23343" y="457.47513" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="69.0" label="Babet">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="429.52975" y="29.457352" z="0.0"></viz:position>
+        <viz:position x="-63.811337" y="199.17397" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="70.0" label="Claquesous">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-91.68966" y="535.5948" z="0.0"></viz:position>
+        <viz:position x="383.31192" y="-23.14695" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="71.0" label="Montparnasse">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-448.64294" y="-72.51701" z="0.0"></viz:position>
+        <viz:position x="515.2952" y="-491.5617" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="72.0" label="Toussaint">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="-80.69451" y="-429.62152" z="0.0"></viz:position>
+        <viz:position x="-393.24475" y="-167.26772" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="73.0" label="Child1">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="394.1722" y="-75.629715" z="0.0"></viz:position>
+        <viz:position x="414.16946" y="120.03927" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="74.0" label="Child2">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="258.3834" y="-237.36678" z="0.0"></viz:position>
+        <viz:position x="-448.17365" y="-61.58265" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="75.0" label="Brujon">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="119.405556" y="-361.62744" z="0.0"></viz:position>
+        <viz:position x="-416.14368" y="91.62972" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
       <node id="76.0" label="MmeHucheloup">
         <attvalues></attvalues>
         <viz:size value="10.0"></viz:size>
-        <viz:position x="64.42277" y="-355.01474" z="0.0"></viz:position>
+        <viz:position x="-338.4807" y="285.8751" z="0.0"></viz:position>
         <viz:color r="153" g="153" b="153"></viz:color>
       </node>
     </nodes>
