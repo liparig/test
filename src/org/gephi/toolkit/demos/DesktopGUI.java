@@ -36,7 +36,6 @@ public class DesktopGUI extends JFrame implements Observer {
 				}
 			}
 		});
-		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		contentPane = new JPanel();
 

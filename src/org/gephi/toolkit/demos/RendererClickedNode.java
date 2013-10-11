@@ -1,3 +1,5 @@
+package org.gephi.toolkit.demos;
+
 import java.awt.Graphics;
 import org.gephi.graph.api.Node;
 import org.gephi.preview.api.Item;
@@ -12,33 +14,30 @@ import org.gephi.preview.spi.ItemBuilder;
 import org.gephi.preview.spi.MouseResponsiveRenderer;
 import org.gephi.preview.spi.PreviewMouseListener;
 import org.gephi.preview.spi.Renderer;
-import org.gephi.toolkit.demos.ItemBuilderTemplate;
-import org.gephi.toolkit.demos.LabelItem;
-import org.gephi.toolkit.demos.MouseListenerLabel;
 import org.openide.util.lookup.ServiceProvider;
 import processing.core.PGraphics;
 
 @ServiceProvider(service = Renderer.class)
-public class RendererNodeLabel implements Renderer, MouseResponsiveRenderer {
+public class RendererClickedNode implements Renderer, MouseResponsiveRenderer {
 
     @Override
     public String getDisplayName() {
-        return "Some name";
+        return "CliccaEtichette";
     }
 
     @Override
     public void preProcess(PreviewModel previewModel) {
+
     }
 
     @Override
     public void render(Item item, RenderTarget target, PreviewProperties properties) {
-        //Retrieve clicked node for the label:
+       //Retrieve clicked node for the label:
         LabelItem label = (LabelItem) item;
-
+        Node node=(Node)label.getSource();
         //Finally draw your graphics for the node label in each target (or just processing):
         if (target instanceof ProcessingTarget) {
-            PGraphics g = ((ProcessingTarget) target).getGraphics();
-            //Or basic java2d graphics : Graphics g = ((ProcessingTarget) target).getApplet().getGraphics();
+           Graphics g = ((ProcessingTarget) target).getApplet().getGraphics();
         } else if (target instanceof PDFTarget) {
         } else if (target instanceof SVGTarget) {
         }

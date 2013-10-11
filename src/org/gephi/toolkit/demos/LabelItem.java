@@ -1,4 +1,6 @@
 package org.gephi.toolkit.demos;
+import java.util.HashMap;
+import java.util.Map;
 import org.gephi.graph.api.Node;
 import org.gephi.preview.api.Item;
 
@@ -6,8 +8,8 @@ import org.gephi.preview.api.Item;
  * Basic item without properties but a node.
  */
 public class LabelItem implements Item{
-    Node node;
-
+    protected final String type="click_label";
+    protected final Node node;
     public LabelItem(Node node) {
         this.node = node;
     }
@@ -19,7 +21,7 @@ public class LabelItem implements Item{
 
     @Override
     public String getType() {
-        return "label.sometype";
+        return type;
     }
 
     @Override
