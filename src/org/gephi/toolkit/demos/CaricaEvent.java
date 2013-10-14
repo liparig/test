@@ -39,8 +39,7 @@ public class CaricaEvent extends Observable implements ActionListener {
             ex.printStackTrace();
             return;
         }
-    	
-        PreviewController previewController=Lookup.getDefault().lookup(PreviewController.class);
+    	PreviewController previewController=Lookup.getDefault().lookup(PreviewController.class);
         PreviewModel previewModel=previewController.getModel();
         previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS,false);
         previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.WHITE));

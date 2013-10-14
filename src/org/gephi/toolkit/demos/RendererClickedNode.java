@@ -35,9 +35,13 @@ public class RendererClickedNode implements Renderer, MouseResponsiveRenderer {
        //Retrieve clicked node for the label:
         LabelItem label = (LabelItem) item;
         Node node=(Node)label.getSource();
+        node.getNodeData().getTextData().setText("PIPPO");
+        System.out.println(node.getNodeData().getTextData().isVisible());
+        
         //Finally draw your graphics for the node label in each target (or just processing):
         if (target instanceof ProcessingTarget) {
-           Graphics g = ((ProcessingTarget) target).getApplet().getGraphics();
+            Graphics g = ((ProcessingTarget) target).getApplet().getGraphics();
+           
         } else if (target instanceof PDFTarget) {
         } else if (target instanceof SVGTarget) {
         }

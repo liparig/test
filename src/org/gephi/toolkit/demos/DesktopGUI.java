@@ -67,8 +67,8 @@ public class DesktopGUI extends JFrame implements Observer {
 
 		menuBarGUI.getCaricaEvent().addObserver(eastMenuGUI.getInfoGUI());
 		menuBarGUI.getCaricaEvent().addObserver(eastMenuGUI.getFiltriPanel());
-
-		menuBarGUI.getCaricaEvent().addObserver(this);
+                menuBarGUI.getMostraEvent().addObserver(this);
+                menuBarGUI.getCaricaEvent().addObserver(this);
 		eastMenuGUI.getFiltriPanel().getApplyEvent().addObserver(this);
 		this.pack();
 		
@@ -88,9 +88,7 @@ public class DesktopGUI extends JFrame implements Observer {
 		eastMenuGUI.getFiltriPanel().getApplyEvent().addObserver(overviewGUI);
 		}
 		applet.mousePressed();
-
-		this.pack();
-	}
+                }
 }
 
 

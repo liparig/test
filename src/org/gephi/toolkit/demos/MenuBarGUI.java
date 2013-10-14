@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 public class MenuBarGUI extends JPanel implements Observer {
 	private CaricaEvent carica;
 	private JLabel lblFile = new JLabel("");
+        private MostraEvent mostra;
 	/**
 	 * Create the panel.
 	 */
@@ -23,7 +24,9 @@ public class MenuBarGUI extends JPanel implements Observer {
 		lblFile.setVisible(false);
 		carica=new CaricaEvent();
 		carica.addObserver(this);
+                mostra=new MostraEvent();
 		SalvaEvent salva=new SalvaEvent();
+                
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{55, 83, 0, 0};
 		gridBagLayout.rowHeights = new int[]{29, 0};
@@ -51,13 +54,27 @@ public class MenuBarGUI extends JPanel implements Observer {
 		gbc_btnSalva.gridx = 1;
 		gbc_btnSalva.gridy = 0;
 		add(btnSalva, gbc_btnSalva);
+                
+                JButton btnMostra = new JButton("Etichette");
+		btnMostra.addActionListener(mostra);
+		GridBagConstraints gbc_btnMostra = new GridBagConstraints();
+		gbc_btnMostra.insets = new Insets(0, 0, 0, 5);
+		gbc_btnMostra.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnMostra.anchor = GridBagConstraints.NORTH;
+		gbc_btnMostra.gridx = 2;
+		gbc_btnMostra.gridy = 0;
+		add(btnMostra, gbc_btnMostra);
+                
 		GridBagConstraints gbc_lblFile = new GridBagConstraints();
-		gbc_lblFile.gridx = 2;
+		gbc_lblFile.gridx = 3;
 		gbc_lblFile.gridy = 0;
 		add(lblFile, gbc_lblFile);
 		}
 	public CaricaEvent getCaricaEvent(){
 		return carica;
+	}
+        public MostraEvent getMostraEvent(){
+		return mostra;
 	}
 	@Override
 	public void update(Observable arg0, Object arg1) {

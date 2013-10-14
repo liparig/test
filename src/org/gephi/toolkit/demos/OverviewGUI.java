@@ -48,8 +48,7 @@ public class OverviewGUI implements Observer{
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		previewController=Lookup.getDefault().lookup(PreviewController.class);
-
-		//New Processing target, get the PApplet
+            //New Processing target, get the PApplet
 		target = (ProcessingTarget) previewController.getRenderTarget(RenderTarget.PROCESSING_TARGET);
 		applet = target.getApplet();
 		applet.init();
