@@ -56,7 +56,7 @@ public class CaricaEvent extends Observable implements ActionListener {
         importController.process(container, new DefaultProcessor(), workspace);
         graphModel=Lookup.getDefault().lookup(GraphController.class).getModel(workspace);
         for(Node node: graphModel.getGraph().getNodes().toArray()){
-        node.getNodeData().getTextData().setText(node.getNodeData().getLabel());
+            node.getNodeData().getTextData().setText(node.getNodeData().getLabel());
             node.getNodeData().getTextData().setVisible(false);
         }
         this.setChanged();

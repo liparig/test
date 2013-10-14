@@ -19,7 +19,6 @@ import processing.core.PGraphics;
 
 @ServiceProvider(service = Renderer.class)
 public class RendererClickedNode implements Renderer, MouseResponsiveRenderer {
-
     @Override
     public String getDisplayName() {
         return "CliccaEtichette";
