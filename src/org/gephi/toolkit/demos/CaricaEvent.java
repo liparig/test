@@ -5,6 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.Observable;
+import org.gephi.graph.api.GraphController;
+import org.gephi.graph.api.GraphModel;
+import org.gephi.graph.api.Node;
 
 import org.gephi.io.importer.api.Container;
 import org.gephi.io.importer.api.EdgeDefault;
@@ -28,6 +31,7 @@ public class CaricaEvent extends Observable implements ActionListener {
 		pc.newProject();
 		Workspace workspace=pc.getCurrentWorkspace();
         ImportController importController = Lookup.getDefault().lookup(ImportController.class);
+        GraphModel graphModel;
         Container container;
         try {
             File file = new File(getClass().getResource("/org/gephi/toolkit/demos/resources/gediminas_graph.gv").toURI());
@@ -41,7 +45,7 @@ public class CaricaEvent extends Observable implements ActionListener {
         }
     	PreviewController previewController=Lookup.getDefault().lookup(PreviewController.class);
         PreviewModel previewModel=previewController.getModel();
-        previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS,false);
+        previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS,true);
         previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.WHITE));
         previewModel.getProperties().putValue(PreviewProperty.EDGE_CURVED, Boolean.FALSE);
         previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);
@@ -50,6 +54,11 @@ public class CaricaEvent extends Observable implements ActionListener {
         previewController.refreshPreview();
       //Append imported data to GraphAPI
         importController.process(container, new DefaultProcessor(), workspace);
+        graphModel=Lookup.getDefault().lookup(GraphController.class).getModel(workspace);
+        for(Node node: graphModel.getGraph().getNodes().toArray()){
+        node.getNodeData().getTextData().setText(node.getNodeData().getLabel());
+            node.getNodeData().getTextData().setVisible(false);
+        }
         this.setChanged();
         this.notifyObservers(path);
 	}

@@ -7,9 +7,9 @@ package org.gephi.toolkit.demos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Observable;
-import org.gephi.preview.api.PreviewController;
-import org.gephi.preview.api.PreviewModel;
-import org.gephi.preview.api.PreviewProperty;
+import org.gephi.graph.api.GraphController;
+import org.gephi.graph.api.GraphModel;
+import org.gephi.graph.api.Node;
 import org.openide.util.Lookup;
 
 /**
@@ -17,16 +17,13 @@ import org.openide.util.Lookup;
  * @author Lipari
  */
 public class MostraEvent extends Observable implements ActionListener {
-
+    private boolean mostra=true;
     public void actionPerformed(ActionEvent ae) {
-        PreviewController previewController=Lookup.getDefault().lookup(PreviewController.class);
-        PreviewModel previewModel=previewController.getModel();
-        if(previewModel.getProperties().getValue(PreviewProperty.SHOW_NODE_LABELS)== Boolean.TRUE)
-             previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS,false);
-        else
-             previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS,true);
-       this.setChanged();
-       this.notifyObservers();
+        GraphModel graphModel=Lookup.getDefault().lookup(GraphController.class).getModel();
+        for(Node node: graphModel.getGraphVisible().getNodes().toArray())
+            node.getNodeData().getTextData().setVisible(mostra);
+            mostra=!mostra;
+         this.setChanged();
+         this.notifyObservers();
     }
-    
 }

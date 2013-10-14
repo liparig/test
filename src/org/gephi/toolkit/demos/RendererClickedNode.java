@@ -33,12 +33,9 @@ public class RendererClickedNode implements Renderer, MouseResponsiveRenderer {
     @Override
     public void render(Item item, RenderTarget target, PreviewProperties properties) {
         //Retrieve clicked node for the label:
-        LabelItem label = (LabelItem) item;
-        Node node=(Node)label.getSource();
-        
         //Finally draw your graphics for the node label in each target (or just processing):
         if (target instanceof ProcessingTarget) {
-            Graphics g = ((ProcessingTarget) target).getApplet().getGraphics();
+         ((ProcessingTarget) target).getApplet().mouseClicked();
             
            
         } else if (target instanceof PDFTarget) {

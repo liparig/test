@@ -22,9 +22,14 @@ public class MouseListenerLabel implements PreviewMouseListener {
             boolean find=false;
            for (Node node : Lookup.getDefault().lookup(GraphController.class).getModel(workspace).getGraphVisible().getNodes()) {
             if (clickingInNode(node, event)) {
-                        find=true;
-                    	System.out.println("NodoCliccato:"+node.getNodeData().getLabel());
-                        properties.putValue("display-label.node.id", node.getNodeData().getId());                       
+                  node.getNodeData().getTextData().setText(node.getNodeData().getLabel());
+                    if(node.getNodeData().getTextData().isVisible())
+                        node.getNodeData().getTextData().setVisible(false);
+                   else
+                       node.getNodeData().getTextData().setVisible(true);
+                find=true;
+                System.out.println("NodoCliccato:"+node.getNodeData().getLabel());
+                properties.putValue("display-label.node.id", node.getNodeData().getId());                       
             }
         }
         if(!find)
