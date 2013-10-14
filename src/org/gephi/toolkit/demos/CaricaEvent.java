@@ -45,7 +45,7 @@ public class CaricaEvent extends Observable implements ActionListener {
         previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.WHITE));
         previewModel.getProperties().putValue(PreviewProperty.EDGE_CURVED, Boolean.FALSE);
         previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);
-        previewModel.getProperties().putValue(PreviewProperty.EDGE_RADIUS, 10f);
+        previewModel.getProperties().putValue(PreviewProperty.EDGE_RADIUS, 5f);
         previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.BLACK);
         previewController.refreshPreview();
       //Append imported data to GraphAPI

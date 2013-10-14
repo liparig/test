@@ -4,16 +4,12 @@
  */
 package org.gephi.toolkit.demos;
 
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Observable;
 import org.gephi.preview.api.PreviewController;
 import org.gephi.preview.api.PreviewModel;
 import org.gephi.preview.api.PreviewProperty;
-import org.gephi.preview.api.ProcessingTarget;
-import org.gephi.preview.api.RenderTarget;
-import org.gephi.preview.types.DependantOriginalColor;
 import org.openide.util.Lookup;
 
 /**

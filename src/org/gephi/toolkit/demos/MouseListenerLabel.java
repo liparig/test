@@ -19,14 +19,16 @@ public class MouseListenerLabel implements PreviewMouseListener {
 
     @Override
     public void mousePressed(PreviewMouseEvent event, PreviewProperties properties, Workspace workspace) {
-          for (Node node : Lookup.getDefault().lookup(GraphController.class).getModel(workspace).getGraphVisible().getNodes()) {
+            boolean find=false;
+           for (Node node : Lookup.getDefault().lookup(GraphController.class).getModel(workspace).getGraphVisible().getNodes()) {
             if (clickingInNode(node, event)) {
+                        find=true;
                     	System.out.println("NodoCliccato:"+node.getNodeData().getLabel());
-                        properties.putValue("display-label.node.id", node.getNodeData().getId());
-                        return;
+                        properties.putValue("display-label.node.id", node.getNodeData().getId());                       
             }
         }
-        properties.removeSimpleValue("display-label.node.id");
+        if(!find)
+            properties.removeSimpleValue("display-label.node.id");
     }
     @Override
     public void mouseDragged(PreviewMouseEvent event, PreviewProperties properties, Workspace workspace) {

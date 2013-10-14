@@ -71,6 +71,7 @@ public class FiltriPanel extends JPanel implements Observer {
 		ckDegree.setPreferredSize(new Dimension(107, 23));
 		ckDegree.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_ckDegree = new GridBagConstraints();
+		gbc_ckDegree.insets = new Insets(0, 0, 5, 0);
 		gbc_ckDegree.anchor = GridBagConstraints.WEST;
 		gbc_ckDegree.gridx = 0;
 		gbc_ckDegree.gridy = 0;
@@ -79,6 +80,7 @@ public class FiltriPanel extends JPanel implements Observer {
 		rangeSliderDegree = new FilterRangeSlider(0,250);
 		rangeSliderDegree.setVisible(false);
 		GridBagConstraints gbc_rangeSliderDegree = new GridBagConstraints();
+		gbc_rangeSliderDegree.insets = new Insets(0, 0, 5, 0);
 		gbc_rangeSliderDegree.fill = GridBagConstraints.BOTH;
 		gbc_rangeSliderDegree.gridx = 0;
 		gbc_rangeSliderDegree.gridy = 1;
@@ -86,6 +88,7 @@ public class FiltriPanel extends JPanel implements Observer {
 		
 		JCheckBox ckInDegree = new JCheckBox("In Degree Range");
 		GridBagConstraints gbc_ckInDegree = new GridBagConstraints();
+		gbc_ckInDegree.insets = new Insets(0, 0, 5, 0);
 		gbc_ckInDegree.anchor = GridBagConstraints.WEST;
 		gbc_ckInDegree.gridx = 0;
 		gbc_ckInDegree.gridy = 2;
@@ -94,6 +97,7 @@ public class FiltriPanel extends JPanel implements Observer {
 		rangeSliderInDegree = new FilterRangeSlider(0,250);
 		rangeSliderInDegree.setVisible(false);
 		GridBagConstraints gbc_rangeSliderInDegree = new GridBagConstraints();
+		gbc_rangeSliderInDegree.insets = new Insets(0, 0, 5, 0);
 		gbc_rangeSliderInDegree.fill = GridBagConstraints.BOTH;
 		gbc_rangeSliderInDegree.gridx = 0;
 		gbc_rangeSliderInDegree.gridy = 3;
@@ -101,6 +105,7 @@ public class FiltriPanel extends JPanel implements Observer {
 
 		JCheckBox ckEdge = new JCheckBox("Edge Weight Range");
 		GridBagConstraints gbc_ckEdge = new GridBagConstraints();
+		gbc_ckEdge.insets = new Insets(0, 0, 5, 0);
 		gbc_ckEdge.anchor = GridBagConstraints.WEST;
 		gbc_ckEdge.gridx = 0;
 		gbc_ckEdge.gridy = 4;
@@ -116,7 +121,6 @@ public class FiltriPanel extends JPanel implements Observer {
 		panel_1.add(rangeSliderEdge, gbc_rangeSliderEdge);
 
 		apply=new ApplyEvent(ckDegree,rangeSliderDegree.getRangeSlider(),ckInDegree,rangeSliderInDegree.getRangeSlider(),ckEdge,rangeSliderEdge.getRangeSlider());
-		
 		JButton btnApplica = new JButton("Applica >");
 		GridBagConstraints gbc_btnApplica = new GridBagConstraints();
 		gbc_btnApplica.anchor = GridBagConstraints.EAST;
@@ -125,8 +129,6 @@ public class FiltriPanel extends JPanel implements Observer {
 		gbc_btnApplica.gridy = 6;
 		panel_1.add(btnApplica, gbc_btnApplica);
 		btnApplica.addActionListener(apply);
-		
-
 		
 		panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "Info Grafo Filtrato", TitledBorder.LEADING, TitledBorder.TOP, null, null));

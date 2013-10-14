@@ -1,5 +1,6 @@
 package org.gephi.toolkit.demos;
 
+import java.awt.Dimension;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
@@ -17,6 +18,7 @@ public class MenuBarGUI extends JPanel implements Observer {
 	private CaricaEvent carica;
 	private JLabel lblFile = new JLabel("");
         private MostraEvent mostra;
+        private JButton btnMostra;
 	/**
 	 * Create the panel.
 	 */
@@ -25,10 +27,11 @@ public class MenuBarGUI extends JPanel implements Observer {
 		carica=new CaricaEvent();
 		carica.addObserver(this);
                 mostra=new MostraEvent();
+                mostra.addObserver(this);
 		SalvaEvent salva=new SalvaEvent();
                 
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{55, 83, 0, 0};
+		gridBagLayout.columnWidths = new int[]{95,95,95, 0};
 		gridBagLayout.rowHeights = new int[]{29, 0};
 		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, Double.MIN_VALUE};
@@ -36,17 +39,17 @@ public class MenuBarGUI extends JPanel implements Observer {
 		
 		JButton btnCarica = new JButton("Carica");
 		btnCarica.addActionListener(carica);
-		btnCarica.setHorizontalAlignment(SwingConstants.LEFT);
 		GridBagConstraints gbc_btnCarica = new GridBagConstraints();
-		gbc_btnCarica.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnCarica.anchor = GridBagConstraints.NORTH;
+		gbc_btnCarica.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnCarica.insets = new Insets(0, 0, 0, 5);
 		gbc_btnCarica.gridx = 0;
 		gbc_btnCarica.gridy = 0;
 		add(btnCarica, gbc_btnCarica);
 		
 		JButton btnSalva = new JButton("Salva");
-		btnSalva.addActionListener(salva);
+                btnSalva.setToolTipText("Salva il grafo in pdf");
+                btnSalva.addActionListener(salva);
 		GridBagConstraints gbc_btnSalva = new GridBagConstraints();
 		gbc_btnSalva.insets = new Insets(0, 0, 0, 5);
 		gbc_btnSalva.fill = GridBagConstraints.HORIZONTAL;
@@ -55,8 +58,10 @@ public class MenuBarGUI extends JPanel implements Observer {
 		gbc_btnSalva.gridy = 0;
 		add(btnSalva, gbc_btnSalva);
                 
-                JButton btnMostra = new JButton("Etichette");
+                btnMostra = new JButton("Mostra");
 		btnMostra.addActionListener(mostra);
+                btnMostra.setToolTipText("Mostra/Nasconde Etichette dei Nodi");
+                btnMostra.setVisible(false);
 		GridBagConstraints gbc_btnMostra = new GridBagConstraints();
 		gbc_btnMostra.insets = new Insets(0, 0, 0, 5);
 		gbc_btnMostra.fill = GridBagConstraints.HORIZONTAL;
@@ -66,7 +71,8 @@ public class MenuBarGUI extends JPanel implements Observer {
 		add(btnMostra, gbc_btnMostra);
                 
 		GridBagConstraints gbc_lblFile = new GridBagConstraints();
-		gbc_lblFile.gridx = 3;
+		gbc_lblFile.anchor=GridBagConstraints.WEST;
+                gbc_lblFile.gridx = 3;
 		gbc_lblFile.gridy = 0;
 		add(lblFile, gbc_lblFile);
 		}
@@ -78,8 +84,16 @@ public class MenuBarGUI extends JPanel implements Observer {
 	}
 	@Override
 	public void update(Observable arg0, Object arg1) {
+                if(arg1==null&& (btnMostra.getText()=="Mostra")) 
+                    btnMostra.setText("Nascondi");
+                else
+                    if(arg1==null&&(btnMostra.getText()=="Nascondi")) 
+                         btnMostra.setText("Mostra");
+                if(arg1!=null){
 		lblFile.setText(" Nome File: "+arg1);
 		lblFile.setVisible(true);
+                btnMostra.setVisible(true);
+                }
 	}
 
 }

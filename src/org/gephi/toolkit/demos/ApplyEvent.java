@@ -13,7 +13,6 @@ import org.gephi.filters.plugin.edge.EdgeWeightBuilder.EdgeWeightFilter;
 import org.gephi.filters.plugin.graph.DegreeRangeBuilder.DegreeRangeFilter;
 import org.gephi.filters.plugin.graph.InDegreeRangeBuilder.InDegreeRangeFilter;
 import org.gephi.filters.plugin.operator.INTERSECTIONBuilder.IntersectionOperator;
-import org.gephi.graph.api.DirectedGraph;
 import org.gephi.graph.api.GraphController;
 import org.gephi.graph.api.GraphModel;
 import org.gephi.graph.api.GraphView;
@@ -26,7 +25,7 @@ public class ApplyEvent extends Observable implements ActionListener {
 	RangeSlider deg;
 	RangeSlider inDeg;
 	RangeSlider edg;
-	
+	Boolean rimuovi=false;
 	public ApplyEvent(JCheckBox ckDegree,RangeSlider deg,JCheckBox ckInDegree,RangeSlider inDeg,JCheckBox ckEdge,RangeSlider edg){
 		this.ckDegree=ckDegree;
 		this.ckInDegree=ckInDegree;
@@ -35,18 +34,17 @@ public class ApplyEvent extends Observable implements ActionListener {
 		this.edg=edg;
 		this.inDeg=inDeg;
 	}
-
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		Query query1=null;
 		Query query2=null;
 		Query query3=null;
+                GraphView view;
 		//Get controllers and models
 		GraphModel graphModel = Lookup.getDefault().lookup(GraphController.class).getModel();
 		FilterController filterController = Lookup.getDefault().lookup(FilterController.class);
 		if(graphModel==null)
 			return;
-
 		/**Filter, remove degree < 10*/
 		if(ckDegree.isSelected()){
 			DegreeRangeFilter degreeFilter = new DegreeRangeFilter();
@@ -79,7 +77,6 @@ public class ApplyEvent extends Observable implements ActionListener {
 		if(ckEdge.isSelected())
 			filterController.setSubQuery(query4, query3);
 		//Set the filter result as the visible view
-		GraphView view;
 		view=graphModel.getVisibleView();
 		if(!view.isMainView())
 		graphModel.destroyView(view);

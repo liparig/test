@@ -1,6 +1,4 @@
 package org.gephi.toolkit.demos;
-import java.util.HashMap;
-import java.util.Map;
 import org.gephi.graph.api.Node;
 import org.gephi.preview.api.Item;
 
