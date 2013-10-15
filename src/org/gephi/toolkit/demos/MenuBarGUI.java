@@ -18,7 +18,9 @@ public class MenuBarGUI extends JPanel implements Observer {
 	private CaricaEvent carica;
 	private JLabel lblFile = new JLabel("");
         private MostraEvent mostra;
+        private ViciniEvent vicini;
         private JButton btnMostra;
+        private JButton btnVicini;
 	/**
 	 * Create the panel.
 	 */
@@ -29,11 +31,12 @@ public class MenuBarGUI extends JPanel implements Observer {
                 mostra=new MostraEvent();
                 mostra.addObserver(this);
 		SalvaEvent salva=new SalvaEvent();
+                vicini=new ViciniEvent();
                 
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{95,95,95, 0};
+		gridBagLayout.columnWidths = new int[]{95,95,95, 95, 0};
 		gridBagLayout.rowHeights = new int[]{29, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
@@ -57,22 +60,34 @@ public class MenuBarGUI extends JPanel implements Observer {
 		gbc_btnSalva.gridx = 1;
 		gbc_btnSalva.gridy = 0;
 		add(btnSalva, gbc_btnSalva);
-                
-                btnMostra = new JButton("Mostra");
+		
+		btnMostra = new JButton("Mostra");
 		btnMostra.addActionListener(mostra);
-                btnMostra.setToolTipText("Mostra/Nasconde Etichette dei Nodi");
-                btnMostra.setVisible(false);
+		btnMostra.setToolTipText("Mostra/Nasconde Etichette dei Nodi");
+		btnMostra.setVisible(false);
+		
+		btnVicini = new JButton("Vicini");
+                btnVicini.addActionListener(vicini);
+                btnVicini.setVisible(false);
+                GridBagConstraints gbc_btnVicini = new GridBagConstraints();
+		gbc_btnVicini.anchor = GridBagConstraints.NORTH;
+		gbc_btnVicini.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnVicini.insets = new Insets(0, 0, 0, 5);
+		gbc_btnVicini.gridx = 2;
+		gbc_btnVicini.gridy = 0;
+		add(btnVicini, gbc_btnVicini);
+                
 		GridBagConstraints gbc_btnMostra = new GridBagConstraints();
 		gbc_btnMostra.insets = new Insets(0, 0, 0, 5);
 		gbc_btnMostra.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnMostra.anchor = GridBagConstraints.NORTH;
-		gbc_btnMostra.gridx = 2;
+		gbc_btnMostra.gridx = 3;
 		gbc_btnMostra.gridy = 0;
 		add(btnMostra, gbc_btnMostra);
                 
 		GridBagConstraints gbc_lblFile = new GridBagConstraints();
 		gbc_lblFile.anchor=GridBagConstraints.WEST;
-                gbc_lblFile.gridx = 3;
+                gbc_lblFile.gridx = 4;
 		gbc_lblFile.gridy = 0;
 		add(lblFile, gbc_lblFile);
 		}
@@ -81,6 +96,9 @@ public class MenuBarGUI extends JPanel implements Observer {
 	}
         public MostraEvent getMostraEvent(){
 		return mostra;
+	}
+        public ViciniEvent getViciniEvent(){
+		return vicini;
 	}
 	@Override
 	public void update(Observable arg0, Object arg1) {
@@ -93,6 +111,7 @@ public class MenuBarGUI extends JPanel implements Observer {
 		lblFile.setText(" Nome File: "+arg1);
 		lblFile.setVisible(true);
                 btnMostra.setVisible(true);
+                btnVicini.setVisible(true);
                 }
 	}
 

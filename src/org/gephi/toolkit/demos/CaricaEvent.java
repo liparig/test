@@ -46,6 +46,7 @@ public class CaricaEvent extends Observable implements ActionListener {
     	PreviewController previewController=Lookup.getDefault().lookup(PreviewController.class);
         PreviewModel previewModel=previewController.getModel();
         previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS,true);
+        previewModel.getProperties().putValue(PreviewProperty.CATEGORY_EDGE_ARROWS,true);
         previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.WHITE));
         previewModel.getProperties().putValue(PreviewProperty.EDGE_CURVED, Boolean.FALSE);
         previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);

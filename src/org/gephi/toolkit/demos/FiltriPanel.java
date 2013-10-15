@@ -38,6 +38,9 @@ public class FiltriPanel extends JPanel implements Observer {
 	private FilterRangeSlider rangeSliderDegree;
 	private FilterRangeSlider rangeSliderInDegree;
 	private FilterDecimalSlider rangeSliderEdge;
+        private JCheckBox ckDegree=null;
+        private JCheckBox ckInDegree=null;
+        private JCheckBox ckEdge=null;
 	/**
 	 * Create the panel.
 	 */
@@ -65,7 +68,7 @@ public class FiltriPanel extends JPanel implements Observer {
 		gbl_panel_1.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel_1.setLayout(gbl_panel_1);
 		
-		JCheckBox ckDegree = new JCheckBox("Degree Range");
+		 ckDegree = new JCheckBox("Degree Range");
 		ckDegree.setMinimumSize(new Dimension(107, 23));
 		ckDegree.setMaximumSize(new Dimension(107, 23));
 		ckDegree.setPreferredSize(new Dimension(107, 23));
@@ -86,7 +89,7 @@ public class FiltriPanel extends JPanel implements Observer {
 		gbc_rangeSliderDegree.gridy = 1;
 		panel_1.add(rangeSliderDegree, gbc_rangeSliderDegree);
 		
-		JCheckBox ckInDegree = new JCheckBox("In Degree Range");
+		ckInDegree = new JCheckBox("In Degree Range");
 		GridBagConstraints gbc_ckInDegree = new GridBagConstraints();
 		gbc_ckInDegree.insets = new Insets(0, 0, 5, 0);
 		gbc_ckInDegree.anchor = GridBagConstraints.WEST;
@@ -103,7 +106,7 @@ public class FiltriPanel extends JPanel implements Observer {
 		gbc_rangeSliderInDegree.gridy = 3;
 		panel_1.add(rangeSliderInDegree, gbc_rangeSliderInDegree);
 
-		JCheckBox ckEdge = new JCheckBox("Edge Weight Range");
+		ckEdge = new JCheckBox("Edge Weight Range");
 		GridBagConstraints gbc_ckEdge = new GridBagConstraints();
 		gbc_ckEdge.insets = new Insets(0, 0, 5, 0);
 		gbc_ckEdge.anchor = GridBagConstraints.WEST;
@@ -131,7 +134,7 @@ public class FiltriPanel extends JPanel implements Observer {
 		btnApplica.addActionListener(apply);
 		
 		panel = new JPanel();
-		panel.setBorder(new TitledBorder(null, "Info Grafo Filtrato", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel.setBorder(new TitledBorder(null, "Info Grafo Visualizzato", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		GridBagConstraints gbc_panel = new GridBagConstraints();
 		gbc_panel.fill = GridBagConstraints.BOTH;
 		gbc_panel.gridx = 0;
@@ -193,8 +196,17 @@ public class FiltriPanel extends JPanel implements Observer {
 			rangeSliderDegree.setVisible(true);
 			rangeSliderInDegree.setVisible(true);
 			rangeSliderEdge.setVisible(true);
-
-			}
+                }
+                if(arg0.getClass()==ViciniEvent.class){
+                    ckDegree.setSelected(false);
+                    ckInDegree.setSelected(false);
+                    ckEdge.setSelected(false);
+                    GraphModel graphModel = Lookup.getDefault().lookup(GraphController.class).getModel();
+                    DirectedGraph graph = graphModel.getDirectedGraphVisible();
+                    lblvalNodi.setText("" + graph.getNodeCount());
+                    lblvalArchi.setText("" + graph.getEdgeCount());
+                    panel.setVisible(true);
+                }
 	}
 	private int getMaxDegree(){
 		GraphModel graphModel = Lookup.getDefault().lookup(GraphController.class).getModel();

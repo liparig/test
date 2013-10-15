@@ -66,6 +66,8 @@ public class DesktopGUI extends JFrame implements Observer {
 		contentPane.add(eastMenuGUI, gbc_eastMenuGUI);
 
 		menuBarGUI.getCaricaEvent().addObserver(eastMenuGUI.getInfoGUI());
+                menuBarGUI.getViciniEvent().addObserver(eastMenuGUI.getFiltriPanel());
+                menuBarGUI.getViciniEvent().addObserver(this);
 		menuBarGUI.getCaricaEvent().addObserver(eastMenuGUI.getFiltriPanel());
                 menuBarGUI.getMostraEvent().addObserver(this);
                 menuBarGUI.getCaricaEvent().addObserver(this);

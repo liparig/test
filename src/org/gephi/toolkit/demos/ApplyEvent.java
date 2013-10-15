@@ -83,7 +83,7 @@ public class ApplyEvent extends Observable implements ActionListener {
 		view=filterController.filter(query4);
 		graphModel.setVisibleView(view);
 		this.setChanged();
-	    this.notifyObservers();
+                this.notifyObservers();
 	}
 
 }
